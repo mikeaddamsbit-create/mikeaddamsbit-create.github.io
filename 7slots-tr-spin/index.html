@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Özel Döndürme Fırsatı</title>
+    <link href="favicon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <audio id="slot-win-audio" preload="">
+        <source src="win.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="slot-spin-audio" preload="">
+        <source src="spin.mp3" type="audio/mpeg">
+    </audio>
+    <header></header>
+    <div class="wrapper">
+        <div class="everyday todayOnlyBlock">
+            <h2 class="todayOnly">SADECE BUGÜN:</h2>
+            <p class="claimSpins"><span>Aşağıdan </span> (3) Ücretsiz Döndürme Hakkı Kazanın</p>
+            <p class="paidOut">Ödenen Tutar:<span>₺ <span id="jackpot">27,468,827.17</span></span>
+            </p>
+            <p>Kalan süre:<span id="cdtime">00:05:01:683</span></p>
+        </div>
+        <div class="roll">
+            <div class="miss" style="display: none">
+                <p class="received">ÜZGÜNÜZ, KAÇIRDINIZ!</p>
+                <p class="receivedbot">(<span id="numleft"></span>) tane daha şansınız var.</p>
+            </div>
+            <div class="info">
+                <div class="blink" style="display: block; opacity: 1">
+                    <p class="received">3 ÜCRETSİZ DÖNÜŞÜNÜZ VAR </p>
+                    <p class="receivedbot"><span>t50.000 ₺'ye kadar kazanma şansı!</span></p>
+                </div>
+            </div>
+            <div class="wheeldiv">
+                <img class="slot" id="slot-start" src="slot-start.png">
+                <img class="slot slot-hidden" id="slot-spin" src="slot-spin.gif">
+                <img class="slot slot-hidden" id="slot-result-1" src="slot-result-1.png">
+                <img class="slot slot-hidden" id="slot-result-2" src="slot-result-2.png">
+                <img class="slot slot-hidden" id="slot-win" src="slot-win.png">
+            </div>
+            <button id="spin">
+                <img src="red-arrow-left.png" style="float: left; width: 35px; margin: -15px -36px;"> Döndürmek
+                <img src="red-arrow-right.png" style="float: right; width: 35px; margin: -15px -36px;">
+            </button>
+            <button id="stop" style="display: none;">Durmak</button>
+            <button id="spin2">
+                <img src="red-arrow-left.png" style="float: left; width: 35px; margin: -15px -36px;"> Döndürmek
+                <img src="red-arrow-right.png" style="float: right; width: 35px; margin: -15px -36px;">
+            </button>
+            <button id="stop2" style="display: none;">Durmak</button>
+            <button id="spin3">
+                <img src="red-arrow-left.png" style="float: left; width: 35px; margin: -15px -36px;"> Döndürmek
+                <img src="red-arrow-right.png" style="float: right; width: 35px; margin: -15px -36px;">
+            </button>
+            <button id="stop3" style="display: none;">Durmak</button>
+        </div>
+        <div class="question" style="display: none;">
+            <div class="topques">
+                <p class="received">TEBRİKLER!</p>
+                <p class="receivedbot">Ödülünüzü almak için</p>
+            </div>
+            <p class="threeq">Bu 3 soruyu cevaplayın:</p>
+            <div id="q1">
+                <div class="boxin">
+                    <p class="questnum">SORU 1:</p>
+                    <p class="quest">18 yaşından büyük müsünüz?</p>
+                </div>
+                <button class="yesno">Evet</button>
+                <button class="yesno">Hayır</button>
+            </div>
+            <div id="q2" style="display: none;">
+                <div class="boxin">
+                    <p class="questnum">SORU 2:</p>
+                    <p class="quest">Daha önce internetten bir şey kazandınız mı? </p>
+                </div>
+                <button class="yesno">Evet</button>
+                <button class="yesno">Hayır</button>
+            </div>
+            <div id="q3" style="display: none;">
+                <div class="boxin">
+                    <p class="questnum">SORU 3:</p>
+                    <p class="quest">Geçerli bir e-posta adresiniz var mı?</p>
+                </div>
+                <button class="yesno">Evet</button>
+                <button class="yesno">Hayır</button>
+            </div>
+            <div class="loading" style="display: none;">
+                <p class="analyzing">Yanıtlarınız kontrol ediliyor, lütfen bekleyin...</p>
+                <div class="bar">
+                    <div class="active"></div>
+                </div>
+            </div>
+        </div>
+        <div class="finaldiv">
+            <div class="finalinfo">
+                <div class="blinkfinal">
+                    <p class="received">TEBRİKLER, 50.000 ₺'YE KADAR ÖDÜL KAZANDINIZ!</p>
+                    <p class="receivedbot">Ödülünüzü Aşağıdan Talep Edin:</p>
+                </div>
+            </div>
+            <a class="cta clearfix" href="https://r8fea.bemobtrcks.com/click" geid="1">
+                <div class="txt">
+                    <p>50.000 ₺'ye kadar Bonusunuzu Alın!</p>
+                    <p>7SLOTS'a kaydolun &amp; Bonusunuzu Alın!</p>
+                    <p class="red"><span class="aval"></span>(2) kişilik yer mevcut</p>
+                </div>
+            </a>
+            <a href="https://r8fea.bemobtrcks.com/click" geid="1" class="claim">
+                <div href="https://r8fea.bemobtrcks.com/click" class="button3" geid="1">
+                    <img src="red-arrow-left.png" style="float: left; width: 35px; margin: -20px"> &gt;&gt; ŞİMDİ 50.000 TL'YE KADAR BONUSUNUZU ALIN &lt;&lt;
+                    <img src="red-arrow-right.png" style="float: right; width: 35px; margin: -20px">
+                </div>
+            </a>
+        </div>
+
+</strong></div><strong>
+	<div class="comments" style="background-color: rgb(255, 255, 255); margin-bottom: 10px; display: none;">
+		<div class="fbcoms">
+			<p class="comments" style="display: none;">Yorumlar:</p>
+			<p class="buttons">
+			<span class="like">Beğen</span> . <span>Yorum</span> . <span>Paylaş</span> . <span>Sil</span>
+			</p>
+			<p class="totlikes"><span id="youand"></span><span class="fbblue">Bunu beğenen 12.068 </span>kişi daha var</p>
+			<p class="viewmore clearfix">
+				<span class="left">Daha fazla yorum görüntüle</span>
+				<span class="right">80.312 kişiden 50'si</span>
+			</p>
+			<div style="display: block; opacity: 1;" id="fb8" class="item hidden">
+				<img class="profileimg" src="1.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Adile Candan
+
+</span> Bu tür şeylerde hiç şansım olmuyor, neden denediğimi bile bilmiyorum</p>
+				<p class="combot"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div style="display: block; opacity: 1;" id="fb7" class="item hidden">
+				<img class="profileimg" src="2.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Burçin Hacioglu
+</span> Boom! 30.000 TRL kazandım. Eğer büyük ikramiyeyi kazanırsam, belki hayallerimdeki kız karşıma çıkar. lol</p>
+				<p class="combot"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div style="display: block; opacity: 1;" id="fb6" class="item hidden">
+				<img class="profileimg" src="3.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Nuriye Çinar
+
+</span> #kayıp </p>
+				<p class="combot"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div style="display: block; opacity: 1;" id="fb5" class="item hidden">
+				<img class="profileimg" src="4.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Adnan Sanli
+</span> 5.000 TL daha zenginleştim! Çok kolaydı. Depozitonuz için teşekkürler!</p>
+				
+				<p class="combot" style="display: block;"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div style="display: block; opacity: 1;" id="fb4" class="item hidden">
+				<img class="profileimg" src="5.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Edric Kayhan
+</span> Oyun iPhone'umda çalışmıyor. Başka kimsede de bu sorun var mı?</p>
+				<p class="combot" style="display: block;"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div style="display: block; opacity: 1;" id="fb3" class="item hidden">
+				<img class="profileimg" src="6.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Selim Cevahir
+</span>  Son iki haftadır bu büyük ikramiyeyi kazanmaya çalışıyorum. Son ikramiye 8.000.000 TRL idi ve mahallemizden Serhat adında birine verilmişti. Bu ikramiye şimdiye kadarki en büyük ikramiye. Ve yakında o da kaybedecek. Maalesef bedava dönüş kazanamadım, ama dönüşler için ödeme yapacağım</p>
+				<p class="combot" style="display: block;"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div style="display: block; opacity: 1;" id="fb2" class="item hidden">
+				<img class="profileimg" src="7.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Doruk Hussein
+</span> Gizemli ödülü nasıl alabilirim? Para yerine onu istiyorum
+</p>
+				<p class="combot" style="display: block;"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div style="display: block; opacity: 1;" id="fb1" class="item hidden">
+				<img class="profileimg" src="8.jpg" width="50" height="50">
+				<p class="comtxt" style="display: block;"><span class="name">Volkan Yakin
+</span> Karım kazanma şansının yıldırım çarpma ihtimalinden daha yüksek olduğunu söyledi. İşte ben de bir yüzme havuzunda, elimde metal bir çubukla duruyorum. hahaha
+</p> 
+				<p class="combot" style="display: block;"><span class="ago">Şu anda</span> . <span class="fblike">Beğen</span></p>
+			</div>
+			<div class="item">
+				<img class="profileimg" src="9.jpg" width="48" height="48">
+				<p class="comtxt" style="display: block;"><span class="name">Serkan Önder
+</span> Tekrar deneyebilir miyim? Çünkü dokunmadan döndü ve kaybettim
+</p>
+				<p class="combot"><span class="ago">11 dakika önce</span> . <span class="fblike">Beğen</span><span class="likes totlikes">267</span></p>
+			</div>
+			<div class="item">
+				<img class="profileimg" src="10.jpg" width="48" height="48">
+				<p class="comtxt" style="display: block;"><span class="name">Hayri Çagatay
+</span> Kazandığıma inanamadım!!! Çok çılgıncaydı!</p>
+				<p class="combot"><span class="ago">17 dakika önce</span> . <span class="fblike">Beğen</span><span class="likes totlikes">63</span></p>
+			</div>
+			<div class="item">
+				<img class="profileimg" src="11.jpg" width="51" height="51">
+				<p class="comtxt" style="display: block;"><span class="name">Adnan Hacioglu
+</span> Sıfıra vurdum... hayatımın hikayesi. Bu gece için biraz bira ve pizza parası biriktirmeyi umuyordum!
+</p>
+				<p class="combot"><span class="ago">19 dakika önce</span> . <span class="fblike">Beğen</span><span class="likes totlikes">112</span></p>
+			</div>
+		</div>   
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="main_script.js"></script>
+
+</body>
+
+</html>
