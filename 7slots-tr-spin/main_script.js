@@ -93,7 +93,7 @@ $(document).ready(function() {
         $("#slot-spin").show();
         $("#slot-spin-audio").get(0).play();
         $(".received").html("TEBRİKLER!");
-        $(".receivedbot").html("50.000 ₺ kazandınız!!");
+        $(".receivedbot").html("17.500 ₺ kazandınız!!");
         $("#stop3").click(function() {
             $("#slot-spin").hide();
             $("#slot-win").show();
