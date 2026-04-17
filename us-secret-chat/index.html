@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jenny | Secret Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="http://cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementsByClassName('msg')[0].style.display = "block";
+            }, 2000);
+            setTimeout(function() {
+                document.getElementsByClassName('msg')[1].style.display = "block";
+            }, 2000);
+            setTimeout(function() {
+                document.getElementsByClassName('msg')[2].style.display = "block";
+            }, 5000);
+            setTimeout(function() {
+                document.getElementsByClassName('msg')[3].style.display = "block";
+            }, 7000);
+            setTimeout(function() {
+                document.getElementsByClassName('msg')[4].style.display = "block";
+            }, 2000);
+        });
+    </script>
+    <script>
+        know = {
+            "1": "Hey there good looking, how are you?💕",
+            "2": "I’m lonely… do you have time to have a fun chat? 👯👄",
+            "3": "Great... u’ll going to love chatting with me 💋 how was ur day?",
+            "4": "it’s ok u don’t need to tell me.. ok ?😛",
+            "5": "it’s ok I know you will like it?😛",
+            "6": "cool now get comfortable & lets have a naughty chat.. ok?👍💋",
+            "7": "U do wanna get naughty right?💏",
+            "8": "I'm sure u will enjoy chatting with me.. right?💋💕",
+            "9": "Where are u now? Hope you are alone 👄?",
+            "10": "hope ur not busy, u want to see more pics😛👯",
+            "11": "Ok... I'm all alone lying in bed, you want to see me… hehe?💕😛",
+            "12": "do u want to see💋💕",
+            "13": "What r u wearing handsome?",
+            "14": "Ok",
+            "15": "Good Bye"
+        };
+
+        function talk() {
+            var user = document.getElementById("userBox").value;
+            var v = 1;
+            var x = Number(document.getElementById('update_value').value);
+            var z = x + 1;
+            document.getElementById("update_value").value = z;
+            document.getElementById("userBox").value = "";
+            document.getElementById("chatLog").innerHTML += "<span id='user_msg'>" + user + "</span><img src='img/user.png' alt='user' class='user-icon'><br><br>" + "<div style='clear:both;'></div>";
+            if (z in know) {
+                var check = document.getElementById("chatLog").innerHTML += "<img src='img/profile.jpg' alt='user' class='girl-icon'><span id='girl_msg' class='msg'>" + know[z] + "</span><br><br>" + "<div style='clear:both;'></div>";
+                if (check) {
+                    window.open("https://r8fea.bemobtrcks.com/click", "_blank");
+                }
+            } else {
+                var check = document.getElementById("chatLog").innerHTML += "<img src='img/profile.jpg' alt='user' class='girl-icon'><span id='girl_msg'>I don't understand...</span><br><br>" + "<div style='clear:both;'></div>";
+                if (check) {
+                    window.open("https://r8fea.bemobtrcks.com/click", "_blank");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header" style="z-index: 1000;"> <img src="img/logo-chat.png" alt="Logo" class="logo"> <img src="img/profile.jpg" alt="profile" class="profile"></div>
+    <div id="first"> <img src='img/profile.jpg' alt='user' class='girl-icon msg' style="display: none;"> <span id='girl_msg' style="display: none;" class="msg">Hey I'm Jenny. Can we chat? Here’s my pic</span> <img src="img/picture.jpg" alt="girl" class="msg" id="girl_pic">        <span id='girl_msg' style="clear:both; margin: 15px 0 0 40px;display: none;" class="msg">Do you like my pic?</span></div>
+    <p id="chatLog"></p>
+    <div class="send" style="z-index: 1000;"> <input type="text" placeholder="Write your message..." id="userBox"> <input type="button" value="Send" onclick="talk(); addText();"></div> <input type="text" id="update_value" style="display: none;"></body>
+
+</html>
+
+<!-- 
+This page has been cleaned for Anstrex spy tool by The Landers Club ( https://thelanders.club ). If you want to get landers ripped and cleaned, visit our site or message us on telegram id sethinitin
+ -->
