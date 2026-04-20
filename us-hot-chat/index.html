@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5d7dff">
+  <title>Hot Chat</title>
+  <script src="js/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="chat-card">
+      <header class="chat-header">
+        <!-- Change this name to your preferred profile name -->
+        <span class="profile-name">Jenny</span>
+        <span class="status">online</span>
+        <span class="typing-indicator" id="typingIndicator">typing...</span>
+      </header>
+
+      <section class="messages" id="messages">
+        <ul>
+          <li class="system-message reveal">
+            <span class="bubble">View previous messages</span>
+          </li>
+
+          <!-- Swap image sources to your own images -->
+          <li class="chat-message m1">
+            <img class="avatar" src="images/profile.jpg" alt="Profile">
+            <span class="bubble">I sent you some photos. Do you like them???<span class="time" id="t1"></span></span>
+          </li>
+
+          <li class="chat-message m2">
+            <img class="avatar" src="images/profile.jpg" alt="Profile">
+            <span class="bubble">Are you here?<span class="time" id="t2"></span></span>
+          </li>
+
+          <li class="chat-message m3">
+            <img class="avatar" src="images/profile.jpg" alt="Profile">
+            <span class="bubble">If you don't answer me, I will delete the photos in a minute!!<span class="time" id="t3"></span></span>
+          </li>
+
+          <li class="chat-message m4">
+            <img class="avatar" src="images/profile.jpg" alt="Profile">
+            <span class="bubble">??!<span class="time" id="t4"></span></span>
+          </li>
+
+          <li class="chat-message m5">
+            <img class="avatar" src="images/profile.jpg" alt="Profile">
+            <span class="bubble">I'm intrested in what you're looking for...<span class="time" id="t5"></span></span>
+          </li>
+
+          <li class="chat-message m6">
+            <img class="avatar" src="images/profile.jpg" alt="Profile">
+            <span class="bubble">Are you gonna text me??<span class="time" id="t6"></span></span>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="input-bar">
+        <div class="composer">
+          <span class="placeholder-text">Type here...</span>
+          <div class="composer-actions" aria-label="Message actions">
+            <button class="icon-btn" type="button" aria-label="Add photo">📷</button>
+            <button class="icon-btn" type="button" aria-label="Start video">📹</button>
+            <button class="icon-btn" type="button" aria-label="Add emoji">😊</button>
+            <button class="icon-btn" type="button" aria-label="More options">⋯</button>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <footer class="legal-footer">
+    The price of an SMS is $0.79 including VAT for customers of the mobile operator T-Mobile. For General Terms and Conditions, see
+    <button class="footer-link" id="openTerms" type="button">General Terms and Conditions</button>.
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <h2 id="popupTitle">Oops! The connection has been lost!</h2>
+      <p>To reconnect, click the button below.</p>
+      <a class="contact-button" id="contactBtn" href="https://r8fea.bemobtrcks.com/click" target="_blank" rel="noopener noreferrer">Reconnect</a>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="termsOverlay" hidden>
+    <div class="modal-window terms-window" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+      <button class="terms-close" id="closeTerms" type="button" aria-label="Close terms">x</button>
+      <h2 id="termsTitle">General Terms and Conditions</h2>
+      <div id="termsContent" class="terms-content"></div>
+      <div id="termsRaw" class="terms-raw">
+        Effective as of [INSERT DATE]
+
+        I. GENERAL PROVISIONS
+
+        1. These General Terms and Conditions (“Terms”) govern the relationship between the operator of the website HookupParadise (hereinafter referred to as the “Operator”) and any person who visits, browses, registers with, or uses the website and the services provided through the website (hereinafter referred to as the “User” in the singular or “Users” in the plural).
+        2. By accessing or using a service on the website, the User declares and accepts that the User has read, understood, and unconditionally agrees to these Terms and all legal consequences arising therefrom. By such use, a legally binding agreement is deemed to exist between the Operator and the User, and no separate written signature is required.
+        
+        ⸻
+        
+        II. BASIC TERMS
+        
+        3. Throughout these Terms, the following words and expressions shall have the following meanings:
+        4. “User” means any natural person who uses and receives services provided by the Operator, regardless of whether such person has registered on the website or not.
+        5. “Operator” means Paradise Interactive Media LLC, a Wyoming limited liability company, registered business address: 30 N Gould St, Suite R, Sheridan, WY 82801, USA, providing services through the website www.hookupparadise.com.
+        6. “Applicable Law” means any applicable federal, state, local, or other law, regulation, rule, ordinance, code, judicial ruling, or administrative act affecting the Operator, the Services, the User, mobile communications, SMS services, privacy, consumer protection, or electronic communications.
+        7. “SMS” means a short text message or similar mobile communication sent by a User to a designated number or short code from the networks of participating mobile carriers.
+        8. “Mobile Carrier” means a participating wireless telecommunications carrier in the United States, including T-Mobile USA, Inc., as well as any other participating carriers through which the Services may be made available.
+        9. “Terms” means these General Terms and Conditions.
+        10. “Force Majeure” means any unforeseen, unavoidable, or extraordinary event beyond the reasonable control of a party, including but not limited to natural disasters, internet outages, carrier outages, governmental action, war, terrorism, strikes, and failures of third-party systems.
+        
+        ⸻
+        
+        III. CONTRACT
+        
+        11. These Terms have the force of a contract and become applicable when the User accesses the website, registers, enters a mobile number, sends an outgoing message to a designated number, or otherwise uses the Services, thereby clearly expressing an intention to use the Services offered by the Operator.
+        12. The conclusion of the contract is carried out through specific, targeted, and logically connected actions in a certain sequence, which express the User’s will to accept these Terms and objectify the User’s consent to use the Services provided. By submitting information on the website, creating an account, or sending an outgoing message from a mobile device to a designated number, the User makes an electronic statement by which the User declares that the User is familiar with these Terms, accepts them, and undertakes to comply with them. The Operator may store information on its servers about the User’s mobile number, IP address, device information, timestamps, and any other information necessary for identification and reproduction of the User’s electronic statement in the event of a legal dispute.
+        13. The User shall be considered notified of these Terms from the date of their publication and shall be considered bound by them from the date of the actual start of using the Services.
+        14. These Terms may be amended and supplemented at the initiative of the Operator. Amendments and supplements shall enter into force upon publication on the website unless a later date is specified. Continued use of the Services after such publication shall constitute acceptance of the updated Terms.
+        15. The Operator shall ensure the publicity, accessibility, and up-to-dateness of these Terms in a manner allowing their storage and reproduction on its website, located at www.hookupparadise.com/terms.
+        16. After the conclusion of the contract, the Operator shall provide access to the Services through which the Services are actually provided to the User.
+        
+        ⸻
+        
+        IV. EXCHANGE OF MESSAGES
+        
+        17. After activating the Service, the User may exchange messages in the Service as permitted by the platform or messaging flow. HookupParadise is a service of an entertaining, social, and communication-oriented nature. The parties declare that they agree and are informed in advance that, due to the remote nature of the Service, information exchanged through the Service may not always be verified, accurate, or complete.
+        18. The Operator may use moderators, agents, representatives, or customer support personnel to communicate with Users using names, screen names, or pseudonyms. If a representative is not online at the time when a User sends a message, the response may be received later or handled by another representative.
+        19. Users may create screen names or profile names. The User is solely responsible for content submitted through the Service and must not impersonate another real person in a misleading or unlawful way.
+        20. The Operator is not responsible for the truthfulness, completeness, or reliability of information provided through the Service by Users or third parties. The Operator has the right to refuse, restrict, or terminate correspondence with a User if the User sends content that, in the Operator’s sole judgment, violates these Terms or Applicable Law.
+        21. The User has the right and opportunity to stop communication at any time by ceasing to send messages, canceling a subscription, or texting STOP where such option is made available for SMS programs. The Operator has the right to automatically or manually censor, block, filter, or remove part or all of the text of incoming or outgoing messages in order to protect Users, enforce these Terms, or comply with Applicable Law.
+        
+        ⸻
+        
+        V. SMS CHAT SERVICES AND MOBILE MESSAGING
+        
+        22. User Declaration
+        23. These Terms govern the relations for using the website, chat features, and any SMS or mobile messaging services offered by HookupParadise. By using the website and the Services provided by the website, the User confirms and declares that the User has read and understood the Terms and fully agrees with them.
+        24. Description of the Service
+        25. The Service may be used by users of participating U.S. mobile carriers, including T-Mobile USA, who are over the age of 18. In view of the specific nature of the Service and its remote provision, by using the Service the User declares that the User is at least 18 years old. The Service is of an entertainment and communication nature and may include chat, profile interaction, SMS alerts, account notifications, promotional messaging, and similar digital features.
+        26. Activation
+        27. In order to use certain Services, the User may register on the website, enter a mobile phone number in a designated form, create an account, or send an SMS to the designated number 71821 with any text or the keyword indicated in the promotion. By doing so, the User expresses explicit consent to access the Service and confirms awareness that the action may activate messaging, account, or content access features. Data and photos displayed in promotional content on the website or in advertising materials may be illustrative and may not necessarily reflect actual users, conversations, or outcomes.
+        28. Price
+        29. Unless expressly stated otherwise on the applicable service page, website subscriptions are billed as follows:
+        
+        * 3-Day Trial Membership: $4.99
+        * Monthly Premium Membership: $39.95 per month
+        * SMS Alerts Program: Up to 10 messages per month
+        * SMS Charges: Message and data rates may apply depending on the User’s mobile plan
+        
+        The User declares and accepts that standard message length limits apply to SMS communications and that longer messages may be divided into multiple messages according to carrier standards. Any charges paid for digital services already delivered, accessed, or activated are non-refundable except where required by law. The Operator has the right to change prices for its Services, but is obliged to notify Users in advance by updating pricing on the relevant pages of the website.
+        
+        30. Marketing
+        31. By accepting these Terms and activating the Service, the User may receive free or paid informational, operational, marketing, or advertising messages by email or SMS, where permitted by law. By accepting these Terms, the User also agrees that the Operator may use the User’s contact details and account data to send marketing and advertising messages regarding its products or services, unless and until the User opts out where such opt-out is available.
+        32. Complaints, Right of Withdrawal, Termination
+        
+        32a. Complaints may be filed only where the Service is unavailable, materially defective, or charged in error due to the fault of the Operator.
+        
+        a) The Operator shall not be responsible for software or hardware problems with the User’s mobile device, power outage, carrier delays, internet outages, incorrect data entry by the User, device malfunction, provider interruptions, insufficient connectivity, or any other circumstances beyond the Operator’s reasonable control.
+        
+        b) Service updates, upgrades, maintenance, or feature changes shall not in themselves constitute grounds for complaint.
+        
+        c) The Operator shall not be liable for compensation where the issue arises from the fault of subcontractors, carriers, payment processors, hosting providers, or similar third parties, except as required by law.
+        
+        32b. Because the Service provides access to digital content, digital communications, and online interaction that may begin immediately after activation, the User expressly agrees that once the Service is activated or access is granted, any statutory right of withdrawal may be limited or lost to the extent permitted by Applicable Law.
+        
+        33. In order to terminate use of the SMS messaging program, the User must send a message with the content STOP in capital letters to the applicable number or short code, including 71821 where applicable. The User may also terminate a website subscription through the billing section of the account or by contacting customer support at support@hookupparadise.com. The User may additionally request termination by writing to:
+        
+        Paradise Interactive Media LLC
+        30 N Gould St, Suite R
+        Sheridan, WY 82801
+        USA
+
+        34. Service Information Table
+
+        Item
+
+Details
+
+Customer service email
+
+support@hookupparadise.com
+
+Legal contact email
+
+legal@hookupparadise.com
+
+Customer service phone
+
++1 (307) 512-4418
+
+Mailing address
+
+30 N Gould St, Suite R, Sheridan, WY 82801, USA
+
+Website
+
+www.hookupparadise.com
+
+Activate website service
+
+By creating an account at www.hookupparadise.com
+
+Activate SMS service
+
+By entering a phone number on the website or texting the promoted keyword to 71821
+
+Trial membership
+
+$4.99 for 3 days
+
+Monthly premium price
+
+$39.95 per month
+
+SMS price
+
+Message and data rates may apply
+
+SMS opt-out
+
+Text STOP
+
+SMS help
+
+Text HELP
+
+VI. RIGHTS AND OBLIGATIONS OF USERS
+
+35. Users undertake:
+
+a) not to commit malicious acts against the Operator or other Users;
+b) not to manipulate, hack, reverse engineer, scrape, or interfere with the website in any way;
+c) not to overload the website with fictitious registrations, requests, bots, spam, or false information;
+d) not to send insults, slander, threats, obscene content, unlawful solicitations, or disrespectful messages to the Operator or other Users;
+e) in case of any problems related to the use of the website or a Service offered by it, to contact the Operator first through customer support;
+f) not to use the Services if under 18 years of age;
+g) not to use the Services for unlawful harassment, fraud, exploitation, or violation of another person’s rights.
+
+36. Users have the right:
+
+a) to use the Services offered by the website in compliance with these Terms;
+b) to stop using the Services at any time subject to applicable cancellation procedures;
+c) to contact customer support regarding billing, technical, or account issues.
+
+⸻
+
+VII. RIGHTS AND OBLIGATIONS OF THE OPERATOR
+
+37. The Operator undertakes:
+
+a) to offer the Users the website and its Services on an “as is” and “as available” basis;
+b) to maintain commercially reasonable efforts to keep the website operational;
+c) to process User data in accordance with the website’s Privacy Policy and Applicable Law;
+d) to avoid disclosing User data except as permitted by law, by consent, or as necessary for service provision.
+
+38. The Operator has the right:
+
+a) to unilaterally terminate or suspend a User’s access to the website and the Services in case of non-compliance with these Terms or at its reasonable discretion for safety, security, legal, or operational reasons;
+b) to set spending, usage, or messaging limits for each User individually in order to protect business interests and prevent abuse;
+c) in case of systematic violations by the User or losses suffered, to seek appropriate legal remedies in accordance with Applicable Law;
+d) to publish links on the website to third-party websites, without being responsible for their content, accuracy, or operation;
+e) to make inquiries and obtain assistance from carriers, payment processors, technical partners, and other service providers as necessary to provide or secure the Services;
+f) to send Users marketing and advertising messages for offered products or services, subject to Applicable Law.
+
+⸻
+
+VIII. PRIVACY AND DATA
+
+39. The User acknowledges that the Operator may collect and process information including name, email address, phone number, IP address, payment-related records, device data, message logs, account preferences, and other information reasonably necessary for the provision, security, administration, and improvement of the Services.
+40. The processing of personal data shall be governed by the website’s Privacy Policy, available at www.hookupparadise.com/privacy.
+41. The Operator may use service providers, payment processors, hosting services, analytics providers, and messaging partners in connection with operation of the Services.
+42. The User is responsible for safeguarding login credentials and for activity occurring under the User’s account.
+
+⸻
+
+IX. FINAL PROVISIONS
+
+43. The parties accept and declare that the Operator shall not be liable for losses, lost profits, indirect damages, incidental damages, or other harm caused to the User or third parties as a result of the User’s use of the Services, except where liability cannot lawfully be excluded.
+44. The Operator shall not be liable for the User’s inability to use the website or each individual Service, nor for claims by the User or third parties arising in connection with use of the Services, except as required by law.
+45. The User agrees and declares that the User is responsible for all actions performed by the User in connection with the use of the Services and for the consequences of such actions.
+46. The User declares that the User is the holder of the mobile number used or a person authorized by the holder to use that number in connection with the Services.
+47. The effect of these Terms may be terminated:
+
+a) by cancellation of the User’s account or subscription;
+b) by texting STOP to the applicable SMS program number;
+c) by written request sent electronically to support@hookupparadise.com;
+d) by objective impossibility of either party to fulfill its obligations;
+e) by dissolution, bankruptcy, or liquidation of the Operator;
+f) by the Operator’s objective impossibility to use its systems due to actions of authorities, carriers, or third parties.
+
+48. The content and resources of the website are used at the discretion of the User and at the User’s own risk and responsibility.
+49. Compliance with these Terms is a mandatory condition for use of the website and the Services offered by the website. Violation of these Terms may result in suspension, termination, refusal of service, or other measures allowed by law.
+50. All unresolved issues under these Terms shall be governed by the laws of the State of Wyoming, USA, without prejudice to any mandatory consumer rights that may apply under the law of the User’s state of residence.
+51. The User and the Operator undertake to protect each other’s legitimate rights and interests and to keep confidential any non-public business information lawfully obtained in connection with the implementation of these Terms.
+52. The applicable language of these Terms is English.
+53. In the event that any provision of these Terms is found invalid or unenforceable, this shall not affect the validity of the remaining provisions, which shall continue in full force and effect.
+54. All disputes arising from these Terms or relating to them, if they cannot be settled amicably through negotiations, shall be submitted to the competent courts located in Sheridan County, Wyoming, unless Applicable Law requires otherwise.
+      </div>
+    </div>
+  </div>
+
+  <script src="js/custom.js"></script>
+</body>
+</html>
